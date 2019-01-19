@@ -1,0 +1,10 @@
+[package]
+name = "malaga"
+version = "0.1.0"
+authors = ["spieljs <spieljs@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+malaga_http_utils = "0.1"
+lapin-futures = "^0.15"
+futures = "0.1"
