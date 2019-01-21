@@ -15,6 +15,12 @@ pub struct Malaga<T, S> {
 }
 
 impl <Req, Res>Malaga<Req, Res> {
+    pub fn new() -> Malaga<Req, Res> {
+        Malaga {
+            middlewares: vec!(),
+        }
+    }
+
     pub fn get(&mut self, url: &str, handler: fn(req: Req, next: Next) ->
         Box<Future<Item = Result<Res, Next>, Error = io::Error> + Send>) {
             self.middlewares.push(Middleware {
