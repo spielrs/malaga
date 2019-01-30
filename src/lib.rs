@@ -3,8 +3,5 @@ extern crate futures;
 
 pub mod worker;
 
-mod malaga;
-
-pub use malaga::Malaga;
-
-pub use worker::helpers::{Next, Mdw};
+pub use worker::helpers::{Next, Mdw, Malaga};
+pub use worker::worker::Worker;
