@@ -1,7 +1,7 @@
 extern crate malaga_http_utils;
 extern crate futures;
 
-pub mod worker;
+pub mod middlewares;
 
-pub use worker::helpers::{Next, Mdw, Malaga};
-pub use worker::worker::Worker;
+pub use middlewares::helpers::{Next, Mdw, MalagaMdw};
+pub use middlewares::middlewares::Middlewares;

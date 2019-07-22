@@ -6,5 +6,5 @@ edition = "2018"
 
 [dependencies]
 malaga_http_utils = "0.1"
-lapin-futures = "^0.15"
+lapin-futures = "0.25.0"
 futures = "0.1"
