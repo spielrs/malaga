@@ -1,7 +1,7 @@
 use malaga_http_utils::utils::Methods;
 use futures::{Future};
 use std::io;
-use super::middlewares::Middlewares;
+use super::mdw::Middlewares;
 
 pub type Next = fn();
 

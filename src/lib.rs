@@ -4,4 +4,7 @@ extern crate futures;
 pub mod middlewares;
 
 pub use middlewares::helpers::{Next, Mdw, MalagaMdw};
-pub use middlewares::middlewares::Middlewares;
+pub use middlewares::mdw::Middlewares;
+
+pub mod worker;
+pub use worker::worker::Worker;
