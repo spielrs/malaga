@@ -20,7 +20,7 @@ pub struct Middleware<Req, Res> {
 }
 
 pub struct MalagaMdw<T, S> {
-    middlewares: Vec<Middleware<T, S>>,
+    pub middlewares: Vec<Middleware<T, S>>,
 }
 
 impl <Req, Res>Middlewares<Req, Res> for MalagaMdw<Req, Res> {
