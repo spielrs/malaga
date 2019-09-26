@@ -1,5 +1,5 @@
 use malaga_http_utils::utils::Methods;
-use super::helpers::{ResponseMdw, Next};
+use super::ctrl::{ResponseMdw, Next};
 
 pub trait Middlewares<Req, Res> {
     fn new() -> Self;

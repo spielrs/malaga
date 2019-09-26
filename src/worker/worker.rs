@@ -1,9 +1,11 @@
-use super::super::middlewares::helpers::MalagaMdw;
-use malaga_http_utils::utils
+use futures::future::{AndThen, Future};
+use lapin_futures as lapin;
+use lapin::{ClientFuture, Channel, Error};
 
-pub trait Worker<MalagaMdw>{
-	fn new(mdw: MalagaMdw) -> Self;
-	fn get_request()-> Self;
-	fn execute_middlewares()->Self;
-	fn response_to_provider()->Self;
+pub trait Worker{
+	fn new(&mut self);
+	fn create_connection(&mut self) -> AndThen<ClientFuture, Box<Future<Item = Channel, Error = Error> + Send>, Channel>;
+	fn get_request_from_provider(&mut self);
+	fn execute_middlewares(&mut self);
+	fn response_to_provider(&mut self);
 }
