@@ -1,5 +1,9 @@
 extern crate malaga_http_utils;
 extern crate futures;
+extern crate log;
+extern crate serde_json;
+extern crate tower_web;
+extern crate tokio;
 
 pub mod middlewares;
 
